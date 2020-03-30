@@ -1,0 +1,4 @@
+*.xml
+*.txt
+jenkins-server/jenkins-home/**
+jenkins-cli.jar

@@ -1,0 +1,20 @@
+version: "3.7"
+services: 
+    jenkins:
+        build:
+            context: .
+            dockerfile: jenkins-server/Dockerfile 
+        image: crileroro/jenkins-docker
+        container_name: jenkins_server
+        volumes:
+            - "./jenkins-server/jenkins-home:/var/jenkins_home"
+        ports: 
+            - "8080:8080"
+            - "53801:53801"
+
+    remote-host:
+        build:
+            context: .
+            dockerfile: remote-host/Dockerfile
+        image: crileroro/remote-host
+        container_name: remote_host
