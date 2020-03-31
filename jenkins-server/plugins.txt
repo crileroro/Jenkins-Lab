@@ -1,0 +1,5 @@
+ssh
+docker-plugin
+github
+job-dsl
+junit

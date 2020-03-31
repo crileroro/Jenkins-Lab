@@ -1,4 +1,4 @@
 *.xml
-*.txt
+jobs.txt
 jenkins-server/jenkins-home/**
 jenkins-cli.jar

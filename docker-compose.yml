@@ -2,8 +2,8 @@ version: "3.7"
 services: 
     jenkins:
         build:
-            context: .
-            dockerfile: jenkins-server/Dockerfile 
+            context: jenkins-server
+            dockerfile: Dockerfile 
         image: crileroro/jenkins-docker
         container_name: jenkins_server
         volumes:
@@ -14,7 +14,7 @@ services:
 
     remote-host:
         build:
-            context: .
-            dockerfile: remote-host/Dockerfile
+            context: remote-host
+            dockerfile: Dockerfile
         image: crileroro/remote-host
         container_name: remote_host
