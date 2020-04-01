@@ -3,11 +3,11 @@ services:
     jenkins:
         build:
             context: jenkins-server
-            dockerfile: Dockerfile 
         image: crileroro/jenkins-docker
         container_name: jenkins_server
         volumes:
             - "./jenkins-server/jenkins-home:/var/jenkins_home"
+            - "/var/run/docker.sock:/var/run/docker.sock"
         ports: 
             - "8080:8080"
             - "53801:53801"
@@ -15,6 +15,5 @@ services:
     remote-host:
         build:
             context: remote-host
-            dockerfile: Dockerfile
         image: crileroro/remote-host
         container_name: remote_host
